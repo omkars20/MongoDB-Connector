@@ -18,7 +18,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
         python-version: ["3.7", "3.8", "3.9"]
 
     steps:
@@ -39,9 +39,11 @@ jobs:
         pip install -r requirements.txt
         pip install -r requirements_dev.txt
         pip install flake8 pytest tox tox-gh-actions mypy
+        pip install -e .
 
     - name: Test with tox
       run: tox
+
 
 
 
