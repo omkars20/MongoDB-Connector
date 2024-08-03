@@ -1,0 +1,6 @@
+# Add virtual environment directories to .gitignore
+echo "venv/" >> .gitignore
+echo "ENV/" >> .gitignore
+echo "env/" >> .gitignore
+echo "env.bak/" >> .gitignore
+echo "venv.bak/" >> .gitignore
